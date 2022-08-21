@@ -14,8 +14,8 @@ function loadImage(){
         newImg = rand(0, IMAGES).toString();
     }while(newImg == actualImg)   
 
-    document.querySelector("img").src = "/img/"+newImg+".jpg";
-    document.getElementById("downloadImage").href = "/img/"+newImg+".jpg";
+    document.querySelector("img").src = "img/"+newImg+".jpg";
+    document.getElementById("downloadImage").href = "img/"+newImg+".jpg";
     actualImg = newImg;
 }
 
