@@ -25,8 +25,22 @@ function loadImage(value){
     else newImg = value.toString();
 
     document.querySelector("img").src = imageApiUrl+"bibi ("+newImg+").jpg";
-    document.getElementById("downloadImage").href = imageApiUrl+"bibi ("+newImg+").jpg";
     actualImg = newImg;
+}
+
+async function downloadImage(){
+    const imageSrc = imageApiUrl+"bibi ("+actualImg+").jpg";
+
+    const image = await fetch(imageSrc)
+    const imageBlog = await image.blob()
+    const imageURL = URL.createObjectURL(imageBlog)
+  
+    const link = document.createElement('a')
+    link.href = imageURL
+    link.download = "Bibi"
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
 }
 
 function changeBackground(){
@@ -53,7 +67,7 @@ function todayBibi(){
     const now = new Date();
 
     if(localStorage.getItem("lastTodayBibi") != null){
-        if(hoursBetweenDates(last.getTime(), now.getTime()) < 24)
+        if(last.getDay() == now.getDay())
             newImage = false;
     }
 
