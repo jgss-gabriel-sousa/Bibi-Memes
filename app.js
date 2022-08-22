@@ -42,21 +42,31 @@ function changeBackground(){
 }
 
 function hoursBetweenDates(first, second){
-    const msBetweenDates = Math.abs(first.getTime() - second.getTime());
+    const msBetweenDates = Math.abs(first - second);
     return msBetweenDates / (60 * 60 * 1000);
 }
 
 
 function todayBibi(){
-    const newImage = true;
+    let newImage = true;
+    const last = new Date(localStorage.getItem("lastTodayBibi"));
+    const now = new Date();
 
     if(localStorage.getItem("lastTodayBibi") != null){
-        ;
+        if(hoursBetweenDates(last.getTime(), now.getTime()) < 24)
+            newImage = false;
     }
 
     if(newImage){
         const timeNow = new Date();
 
         localStorage.setItem("lastTodayBibi",timeNow);
+        
+        let newImg;
+        do{
+            newImg = rand(1, IMAGES).toString();
+        }while(newImg == localStorage.getItem("todayImg"))   
+        localStorage.setItem("todayImg",newImg);
     }
+    loadImage(localStorage.getItem("todayImg"));
 }
