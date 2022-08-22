@@ -1,5 +1,7 @@
+@font-face {font-family: "FiendstarW01-Bold"; src: url("//db.onlinewebfonts.com/t/9280a336215bd036e843a066d1dc1bd2.eot"); src: url("//db.onlinewebfonts.com/t/9280a336215bd036e843a066d1dc1bd2.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/9280a336215bd036e843a066d1dc1bd2.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/9280a336215bd036e843a066d1dc1bd2.woff") format("woff"), url("//db.onlinewebfonts.com/t/9280a336215bd036e843a066d1dc1bd2.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/9280a336215bd036e843a066d1dc1bd2.svg#FiendstarW01-Bold") format("svg"); }
+
 *{
-    font-family: Fiendstar W01 Bold,Source Sans Pro,Arial,Helvetica,sans-serif;
+    font-family: FiendstarW01-Bold;
 }
 
 html, body {
@@ -31,7 +33,7 @@ a {
 
 button {
     width: 200px;
-    font-size: 1rem;
+    font-size: 1.25rem;
     padding: 1rem;
     font-weight: bold;
     color: white;
