@@ -20,7 +20,7 @@ function loadImage(value){
     if(!value){
         do{
             newImg = rand(1, IMAGES).toString();
-        }while(newImg == actualImg)   
+        }while(newImg == actualImg);
     }
     else newImg = value.toString();
 
@@ -47,7 +47,7 @@ function changeBackground(){
     let newBg;
     do{
         newBg = "bg_"+rand(0,BACKGROUNDS).toString();
-    }while(newBg == actualBackground)   
+    }while(newBg == actualBackground);
 
     const body = document.querySelector("body");
     body.classList.remove(actualBackground);
@@ -79,7 +79,7 @@ function todayBibi(){
         let newImg;
         do{
             newImg = rand(1, IMAGES).toString();
-        }while(newImg == localStorage.getItem("todayImg"))   
+        }while(newImg == localStorage.getItem("todayImg"));
         localStorage.setItem("todayImg",newImg);
     }
     loadImage(localStorage.getItem("todayImg"));

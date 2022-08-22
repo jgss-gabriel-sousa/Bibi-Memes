@@ -9,19 +9,28 @@
     <link rel="stylesheet" href="backgrounds.css"/>
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     
+    <script src="https://kit.fontawesome.com/893953f084.js" crossorigin="anonymous"></script>
     <script src="app.js" defer></script>
 
     <title>Daily Bibi</title>
 </head>
 <body>
-    <br>
-    <button onclick="todayBibi()">Sua Bibi de Hj</button>
-    <button onclick="newImage()">Nova imagem</button>
-    <button onclick="downloadImage()">Download</button>
-    <br>
+    <div id="buttons">
+        <button onclick="todayBibi()">Sua Bibi de Hj</button>
+        <button onclick="newImage()">Nova imagem</button>
+        <button onclick="downloadImage()">Download</button>
+        <button class="auto-btn" onclick='downloadImage();openNewTab("https://www.instagram.com/create/story")'><span><i class="fab fa-instagram"></i></span></button>
+    </div>
+
     <figure>
         <img alt="Erro ao carregar a Imagem. Tente Recarregar a página">
         <figcaption></figcaption>
     </figure>
+
+    <script>
+        function openNewTab(url){
+            window.open(url, '_blank').focus();
+        }
+    </script>
 </body>
 </html>
