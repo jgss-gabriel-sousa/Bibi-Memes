@@ -1,7 +1,7 @@
 @font-face {font-family: "FiendstarW01-Bold"; src: url("//db.onlinewebfonts.com/t/9280a336215bd036e843a066d1dc1bd2.eot"); src: url("//db.onlinewebfonts.com/t/9280a336215bd036e843a066d1dc1bd2.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/9280a336215bd036e843a066d1dc1bd2.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/9280a336215bd036e843a066d1dc1bd2.woff") format("woff"), url("//db.onlinewebfonts.com/t/9280a336215bd036e843a066d1dc1bd2.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/9280a336215bd036e843a066d1dc1bd2.svg#FiendstarW01-Bold") format("svg"); }
 
 *{
-    font-family: FiendstarW01-Bold;
+    font-family: FiendstarW01-Bold, cursive;
 }
 
 html, body {
