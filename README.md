@@ -1,3 +1,2 @@
-# Bibi Memes
- Bibi Cocielo Memes
+# Daily Bibi
 https://jgss-gabriel-sousa.github.io/Daily-Bibi/
