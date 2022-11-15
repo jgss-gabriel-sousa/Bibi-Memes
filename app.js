@@ -1,13 +1,7 @@
 const IMAGES = 82;
-const BACKGROUNDS = 5;
 
-let actualBackground = "bg_0";
 let actualImg = "0";
 let imageApiUrl = "https://raw.githubusercontent.com/jgss-gabriel-sousa/bibi-image-api/main/img/"
-
-function rand(min, max){
-    return Math.floor(Math.random() * max) + min;
-}
 
 function newImage(){
     loadImage();
@@ -43,18 +37,6 @@ async function downloadImage(){
     document.body.removeChild(link)
 }
 
-function changeBackground(){
-    let newBg;
-    do{
-        newBg = "bg_"+rand(0,BACKGROUNDS).toString();
-    }while(newBg == actualBackground);
-
-    const body = document.querySelector("body");
-    body.classList.remove(actualBackground);
-    body.classList.add(newBg);
-    actualBackground = newBg;
-}
-
 function hoursBetweenDates(first, second){
     const msBetweenDates = Math.abs(first - second);
     return msBetweenDates / (60 * 60 * 1000);
@@ -83,4 +65,4 @@ function todayBibi(){
         localStorage.setItem("todayImg",newImg);
     }
     loadImage(localStorage.getItem("todayImg"));
-}
+}todayBibi();
